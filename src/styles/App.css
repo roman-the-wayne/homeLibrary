@@ -1,6 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  height: 100vh;
+  background-color: #242424;
+  padding: 10px;
+  transition: all 0.2s ease;
 }
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.sidebar .links a {
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar .links a:hover {
+  text-decoration: underline;
+}
+.sidebar.active {
+  width: 200px;
+}
+.sidebar.disabled {
+  width: 50px;
+}/*# sourceMappingURL=App.css.map */

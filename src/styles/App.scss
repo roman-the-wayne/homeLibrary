@@ -1,0 +1,32 @@
+@mixin layout($type, $justify) {
+  display: flex;
+  flex-direction: $type;
+  justify-content: $justify;
+}
+
+.sidebar {
+  @include layout(column, left);
+  height: 100vh;
+  background-color: #242424;
+  padding: 10px;
+  transition: all 0.2s ease;
+
+  .links {
+    @include layout(column, left);
+    a {
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.active {
+    width: 200px;
+  }
+
+  &.disabled {
+    width: 50px;
+  }
+}

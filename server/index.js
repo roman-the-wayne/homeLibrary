@@ -5,6 +5,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors());
+app.use('/images', express.static('uploads/'));
 
 const upload = multer({ dest: 'uploads/' });
 
